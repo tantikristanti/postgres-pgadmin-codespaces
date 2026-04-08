@@ -24,4 +24,4 @@ For ease of use in this project, the data was:
 1. Converted from Parquet to **CSV** format.
 2. Compressed into **GZ** files.
 
-The processed copy of this dataset is hosted in the [project repository https://github.com/tantikristanti/NYC-Taxi-Dataset](htps://github.com/tantikristanti/NYC-Taxi-Dataset) for direct access.
+The processed copy of this dataset is hosted in the [project repository](https://github.com/tantikristanti/NYC-Taxi-Dataset) for direct access.
