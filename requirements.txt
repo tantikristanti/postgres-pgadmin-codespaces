@@ -1,0 +1,10 @@
+pandas
+pyarrow
+requests
+python-dotenv
+psycopg2-binary
+sqlalchemy
+tqdm
+jupyter
+pgcli
+click
