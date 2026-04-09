@@ -128,7 +128,7 @@ def main(target_table, url, chunksize):
 
     logging.info('Starting taxi trip data ingestion...')
     # Create Database Connection with fast executemany enabled
-    connection_engine = create_engine(f'postgresql://{pg_user}:{pg_pass}@{pg_host}:{pg_port}/ny_taxi_db')
+    connection_engine = create_engine(f'postgresql://{pg_user}:{pg_pass}@{pg_host}:{pg_port}/{pg_db}')
     
     # Read the data in batches
     ingest_data(

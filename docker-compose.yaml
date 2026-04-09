@@ -1,26 +1,40 @@
 services:
-  postgres_service:
+  postgres:
     image: postgres:18
+    container_name: postgres
+    volumes:
+      - "postgres_data:/var/lib/postgresql:rw"
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_DB=${POSTGRES_DB}
-    volumes:
-      - "postgres_data:/var/lib/postgresql:rw"
+    env_file:
+      - .env
     ports:
-      - "5432:5432"
+      - "5431:5432" # HOST_PORT: CONTAINER_PORT; PostgreSQL runs on port 5432 but it's mapped to port 5431 in the host machine to avoid conflicts with other PostgreSQL instances that might be running on the host.
+    networks:
+      - postgres_network  
   pgadmin:
     image: dpage/pgadmin4
+    container_name: pgadmin
+    volumes:
+      - "pgadmin_data:/var/lib/pgadmin"
     environment:
       - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
       - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
-    volumes:
-      - "pgadmin_data:/var/lib/pgadmin"
+    env_file:
+      - .env
     ports:
-      - "8085:80"
+      - "8085:80" # HOST_PORT: CONTAINER_PORT; The pgAdmin runs in the host on port 8085 (localhost:8085) and is mapped to port 80 in the container.
+    networks:
+      - postgres_network
 
 volumes:
   postgres_data:
   pgadmin_data:
+
+networks:
+  postgres_network:
+    driver: bridge
 
 
