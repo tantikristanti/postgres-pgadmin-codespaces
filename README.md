@@ -37,6 +37,7 @@ The copy of this dataset is hosted in the [NYC Taxi Dataset repository](https://
 ### Step 0: Clone this Repo, Initialize a Project, and Install Requirements
 
 ***Clone this repository***
+
 ```bash
 git clone https://github.com/tantikristanti/postgres-pgadmin-codespaces.git
 ```
@@ -51,6 +52,7 @@ uv init
 
 > `uv` will create the following files:
 
+```
 .
 ├── .venv
 │   ├── bin
@@ -61,8 +63,10 @@ uv init
 ├── main.py
 ├── pyproject.toml
 └── uv.lock
+```
 
 ***Activate the environment variable***
+
 ```bash
 source .venv/bin/activate
 ```
