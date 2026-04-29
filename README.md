@@ -1,8 +1,8 @@
-# 👨‍💻 postgres-pgadmin-codespaces
+# postgres-pgadmin-codespaces
 
 Containerized PostgreSQL and pgAdmin for structured data ingestion.
 
-## 📂 Dataset Overview
+## Dataset Overview
 
 This project uses the **NYC Taxi Trip Record Datasets**, originally
 sourced from the official [TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) page.
