@@ -34,6 +34,45 @@ The copy of this dataset is hosted in the [NYC Taxi Dataset repository](https://
 
 ## ❓ How to Run the Data Ingestion Pipeline?
 
+### Step 0: Clone this Repo, Initialize a Project, and Install Requirements
+
+***Clone this repository***
+```bash
+git clone https://github.com/tantikristanti/postgres-pgadmin-codespaces.git
+```
+
+***Initialize project with UV***
+We'll initialize a project in the working directory.
+
+```bash
+cd postgres-pgadmin-codespaces
+uv init
+```
+
+> `uv` will create the following files:
+
+.
+├── .venv
+│   ├── bin
+│   ├── lib
+│   └── pyvenv.cfg
+├── .python-version
+├── README.md
+├── main.py
+├── pyproject.toml
+└── uv.lock
+
+***Activate the environment variable***
+```bash
+source .venv/bin/activate
+```
+
+***Install requirements***
+
+```bash
+uv add -r requirements.txt
+```
+
 ### Step 1: Run the Postgres and pgAdmin Containers
 
 ```bash
